@@ -1,0 +1,10 @@
+plane,Boeing,747,1998,900,400,10000,LAX
+plane,Airbus,A380,2007,940,500,11000,LAX
+ship,Maersk,Emma,2006,25,container,170000
+ship,Cosco,Kobe,2008,20,container,150000
+ship,Hyundai,Spirit,2011,30,car,70000
+airport,LAX,Los Angeles International Airport,Los Angeles,USA
+airport,JFK,John F. Kennedy International Airport,New York City,USA
+airport,LHR,Heathrow Airport,London,UK
+airport,CDG,Charles de Gaulle Airport,Paris,France
+airport,HND,Tokyo International Airport,Tokyo,Japan

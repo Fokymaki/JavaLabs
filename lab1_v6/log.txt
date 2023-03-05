@@ -1,0 +1,5 @@
+Created vehicle: Plane{brand='Boeing', model='747', year=1998, maxSpeed=900, passengers=400, altitude=10000, cargos=[]}
+Created vehicle: Plane{brand='Airbus', model='A380', year=2007, maxSpeed=940, passengers=500, altitude=11000, cargos=[]}
+Created vehicle: Ship{brand='Maersk', model='Emma', year=2006, maxSpeed=25, shipType=container, displacement=170000, cargos=[]}
+Created vehicle: Ship{brand='Cosco', model='Kobe', year=2008, maxSpeed=20, shipType=container, displacement=150000, cargos=[]}
+Created vehicle: Ship{brand='Hyundai', model='Spirit', year=2011, maxSpeed=30, shipType=car, displacement=70000, cargos=[]}

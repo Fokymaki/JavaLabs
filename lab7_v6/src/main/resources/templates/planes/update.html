@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Plane</title>
+</head>
+<body>
+<h1>Update Plane</h1>
+
+<form th:object="${plane}" method="post" th:action="@{/planes/update}">
+  <label>Brand:</label>
+  <input type="text" th:field="*{plane.brand}"/><br/>
+
+  <label>Model:</label>
+  <input type="text" th:field="*{plane.model}"/><br/>
+
+  <label>Year:</label>
+  <input type="number" th:field="*{plane.year}"/><br/>
+
+  <label>Max Speed:</label>
+  <input type="number" th:field="*{plane.maxSpeed}"/><br/>
+
+  <label>Passengers:</label>
+  <input type="number" th:field="*{plane.passengers}"/><br/>
+
+  <label>Altitude:</label>
+  <input type="number" th:field="*{plane.altitude}"/><br/>
+
+  <label>Airport:</label>
+  <select th:field="*{plane.airport}">
+    <option th:each="airport : ${airports}" th:value="${airport.iata}" th:text="${airport.name}"></option>
+  </select><br/>
+
+  <input type="submit" value="Update"/>
+</form>
+
+<a th:href="@{/planes}">Cancel</a>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Plane</title>
+</head>
+<body>
+<h1>Delete Plane</h1>
+
+<p>Are you sure you want to delete this plane?</p>
+<p>Brand: <span th:text="${plane.brand}"></span></p>
+<p>Model: <span th:text="${plane.model}"></span></p>
+<p>Year: <span th:text="${plane.year}"></span></p>
+<p>Max Speed: <span th:text="${plane.maxSpeed}"></span></p>
+<p>Passengers: <span th:text="${plane.passengers}"></span></p>
+<p>Altitude: <span th:text="${plane.altitude}"></span></p>
+<p>Airport: <span th:text="${plane.airport}"></span></p>
+
+<form th:action="@{/planes/delete}" method="post">
+    <input type="hidden" th:field="*{plane.id}"/>
+    <input type="submit" value="Delete"/>
+</form>
+
+<a th:href="@{/planes}">Cancel</a>
+
+</body>
+</html>

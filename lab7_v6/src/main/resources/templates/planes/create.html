@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Plane</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Create Plane</h1>
+    <form method="post" th:action="@{/planes/create}">
+        <div class="form-group">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" required>
+        </div>
+        <div class="form-group">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required>
+        </div>
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+        </div>
+        <div class="form-group">
+            <label for="maxSpeed">Max Speed:</label>
+            <input type="number" id="maxSpeed" name="maxSpeed" required>
+        </div>
+        <div class="form-group">
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" required>
+        </div>
+        <div class="form-group">
+            <label for="altitude">Altitude:</label>
+            <input type="number" id="altitude" name="altitude" required>
+        </div>
+        <div class="form-group">
+            <label for="airport">Airport:</label>
+            <select id="airport" name="airport" required>
+                <option th:each="airport : ${airports}"
+                        th:value="${airport.iata}"
+                        th:text="${airport.name}">Airport</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</div>
+</body>
+</html>
